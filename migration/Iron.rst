@@ -299,3 +299,7 @@ New collision monitor parameter
 *******************************
 
 `PR #4207 <https://github.com/ros-planning/navigation2/pull/4207>`_ introduces a new boolean parameter ``polygon_subscribe_transient_local`` (value is false by default), which set the QoS durability for polygon topic or footprint topic subscription.
+
+Standardization of Plugin Naming with Double Colons (::)
+*******************************
+`PR #4220 <https://github.com/ros-planning/navigation2/pull/4220>`_ standardizes plugin naming to use double colons (::), replacing the previous mixed use of slashes (/) and double colons.

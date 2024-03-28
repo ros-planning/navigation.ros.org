@@ -172,7 +172,7 @@ It is good practice to place these lines at the end of the file but technically,
 .. code-block:: xml
 
   <library path="nav2_sms_behavior_plugin">
-    <class name="nav2_sms_behavior/SendSms" type="nav2_sms_behavior::SendSms" base_class_type="nav2_core::Behavior">
+    <class type="nav2_sms_behavior::SendSms" base_class_type="nav2_core::Behavior">
       <description>This is an example plugin which produces an SMS text message recovery.</description>
     </class>
   </library>
@@ -211,11 +211,11 @@ To enable the plugin, we need to modify the ``nav2_params.yaml`` file as below t
       behavior_plugins: ["spin", "backup", "wait"]  # Humble and later
       recovery_plugins: ["spin", "backup", "wait"]  # Galactic and earlier
       spin:
-        plugin: "nav2_behaviors/Spin"
+        plugin: "nav2_behaviors::Spin"
       backup:
-        plugin: "nav2_behaviors/BackUp"
+        plugin: "nav2_behaviors::BackUp"
       wait:
-        plugin: "nav2_behaviors/Wait"
+        plugin: "nav2_behaviors::Wait"
       global_frame: odom
       robot_base_frame: base_link
       transform_timeout: 0.1
@@ -240,13 +240,13 @@ with
       behavior_plugins: ["spin", "backup", "wait","send_sms"]  # Humble and newer
       recovery_plugins: ["spin", "backup", "wait","send_sms"]  # Galactic and earlier
       spin:
-        plugin: "nav2_behaviors/Spin"
+        plugin: "nav2_behaviors::Spin"
       backup:
-        plugin: "nav2_behaviors/BackUp"
+        plugin: "nav2_behaviors::BackUp"
       wait:
-        plugin: "nav2_behaviors/Wait"
+        plugin: "nav2_behaviors::Wait"
       send_sms:
-        plugin: "nav2_sms_behavior/SendSms"
+        plugin: "nav2_sms_behavior::SendSms"
       account_sid: ... # your sid
       auth_token: ... # your token
       from_number: ... # your number
