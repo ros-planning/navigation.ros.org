@@ -295,7 +295,8 @@ New BtActionServer/BtNavigator parameter
 `PR #4209 <https://github.com/ros-planning/navigation2/pull/4209>`_ introduces a new boolean parameter ``always_reload_bt_xml``, which enables the possibility to always reload a requested behavior tree XML description, regardless of the currently active XML. This allows keeping the action server running while changing/developing the XML description.
 
 
-New collision monitor parameter
-*******************************
+New collision monitor parameters
+********************************
 
 `PR #4207 <https://github.com/ros-planning/navigation2/pull/4207>`_ introduces a new boolean parameter ``polygon_subscribe_transient_local`` (value is false by default), which set the QoS durability for polygon topic or footprint topic subscription.
+`PR #4226 <https://github.com/ros-planning/navigation2/pull/4226>`_ introduces a new string parameter ``<polygon_name>.radius_sub_topic``, which set the topic dynamically updating the current circle polygon radius (if parameter ``<polygon_name>.radius`` is not set).

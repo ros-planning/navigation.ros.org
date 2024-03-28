@@ -245,6 +245,17 @@ Polygons parameters
   Description:
     Topic to listen the polygon points from. Applicable only for ``polygon`` type and ``stop``/``slowdown``/``limit`` action types. Causes an error, if not specified **and** points are also not specified. If both ``points`` and ``polygon_sub_topic`` are specified, the static ``points`` takes priority.
 
+:``<polygon_name>``.radius_sub_topic:
+
+  ============== =============================
+  Type           Default
+  -------------- -----------------------------
+  string         N/A
+  ============== =============================
+
+  Description:
+    Topic to listen the circle radius from. Applicable only for ``circle`` type and ``stop``/``slowdown``/``limit`` action types. Causes an error, if not specified **and** radius is also not specified. If both ``raidus`` and ``radius_sub_topic`` are specified, the static ``radius`` takes priority.
+
 :``<polygon_name>``.footprint_topic:
 
   ============== ===================================
@@ -276,7 +287,7 @@ Polygons parameters
   ============== =============================
 
   Description:
-    Circle radius. Used for ``circle`` type. Causes an error, if not specialized.
+    Circle radius. Used for ``circle`` type. If not specified, the collision monitor will use dynamic polygon subscription to ``radius_sub_topic`` for circle radius in the ``stop``/``slowdown``/``limit`` action types.
 
 :``<polygon_name>``.action_type:
 
